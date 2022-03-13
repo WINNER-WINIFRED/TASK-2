@@ -31,11 +31,11 @@ body{
 }
 
 #container{
-    margin-left: 550px;
-    width: 35%;
+    margin-left: 450px;
+    width: 40%;
     background: white;
     padding-top: 50px;
-    padding: 40px;
+    padding: 60px;
 }
 
 #total{
@@ -110,6 +110,8 @@ font-size: large;
     border: 0px;
     border-bottom: 2px solid black;
     margin-top: 15%;
+    padding-left: 11%;
+    margin-right: -10%;
 }
 
 #Email{
