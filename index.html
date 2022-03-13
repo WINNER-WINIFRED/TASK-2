@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css"></link>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id="form" onsubmit=" validateForm()">
+            <div>
+                <label for name = Name>Name</label><br>
+                <input name = "my_name" type="text" id="name" class="name" placeholder="">   
+            </div>
+            <div>
+                <label for email=email>Email</label><br>
+                <input name = "my_email" type="email" id="email" class="email" placeholder="">
+            </div>
+
+            <div name= "my_date" 1d="date">
+                <label for time = Pick a date>Pick a date</label>
+                <input name = "my_date1" type="text" id="date1" class="date1" placeholder="MM" min="1" max="12">
+                <input name = "my_date2" type="text" id="date2" class="date2" placeholder="DD" min="1" max="31"> 
+                <input name = "my_date3" type="text" id="date3" class="date3" placeholder="YYYY" min="2022" max="2030">   
+            </div>
+            
+            <div 1d="time">
+                <label for time = Pick a time>Pick a time</label>
+                <input name = "my_time1" type="text" id="time1" class="time1" placeholder="09" min="1" max="12">
+                <input name = "my_time2" type="text" id="time2" class="time2" placeholder="00" min="00" max="59"> 
+                <select name = "my_time3" id="time3">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+            </select>   
+            </div>
+            <div id="personCount">
+                <input type="button" value="+" id="inc" onclick="incNumber()"/>
+                <span id="personText">1 Person</span>
+                <!-- <label id="personText">1Person</label> -->
+                <input type="button" value="-" id="dec" onclick="decNumber()"/>
+            </div>
+            <hr>
+            <div id="btnContainer">
+                <button id="btn2" type="submit">MAKE RESERVATION</button>
+            </div>
+                    
+        </form>
+    </div>
+    <script type="text/javascript">
+
+        const validateForm = () => {
+            let validNameRegex = "^[a-zA-Z]*$";
+            let my_name = document.getElementById("name");
+            let my_email = document.getElementById("email");
+            let validDate1Regex = "^[0-9]*$";
+            let my_date1 = document.getElementById("date1");
+            let my_date2 = document.getElementById("date2");
+            let my_date3 = document.getElementById("date3");
+            let my_time1 = document.getElementById("time1");
+            let my_time2 = document.getElementById("time2");
+            let my_time3 = document.getElementById("time3");
+            // name
+            if(!(my_name.value.length !== 0 && my_name.value.match(validNameRegex) && my_name.value.length > 2) ){
+                     alert("name is invalid ");
+                    return false;
+            }
+
+            if(!(my_email.value.length !== 0 )){
+                alert("please, enter a valid email!!");
+                return false;
+            }
+
+            if(!(my_date1.value.length !== 0 && my_date1.value.match(validDate1Regex) && my_date1.value <= 12) ){
+                 alert("invalid month!!");
+                 return false;
+        }
+            if (!(my_date2.value.length !== 0 && my_date2.value.match(validDate1Regex) && my_date2.value < 32)){
+                alert("invalid date!!");
+                return false;
+            }
+
+            if (!(my_date3.value.length !== 0 && my_date3.value.match(validDate1Regex) && my_date3.value > 2021 )){
+                alert("invalid year!!");
+                return false;
+            }
+            if(!(my_time1.value.length !== 0 && my_time1.value < 13 && my_time1.value !== 0)){
+                alert("invalid time in hour!!");
+                return false;
+            }
+
+            if(!(my_time2.value.length !== 0 && my_time2.value < 60)){
+                alert("invalid time in minutes");
+                return false;
+            }
+
+            if((my_time3.value.length === 0)){
+                alert("select AM or PM");
+                return false;
+            }
+
+            
+            // submit form
+            alert("form submitted");
+        }
+ 
+        // counter validation
+        var personCount = 1;
+    
+        function incNumber() {
+            if (personCount < 10) {
+                personCount = personCount+1;
+            
+            } else if (personCount == 10) {
+                personCount = 1;
+            }
+            if(personCount == 1) {
+ 
+                document.getElementById("personText").innerHTML = `${personCount} Person`;
+            }
+            else {
+                document.getElementById("personText").innerHTML = personCount + " People";
+ 
+            }
+        }
+    
+        function decNumber() {
+            if (personCount > 1) {
+                personCount = personCount -1;
+            } 
+            if(personCount == 1) {
+ 
+            document.getElementById("personText").innerHTML = `${personCount} Person`;
+}
+else {
+            document.getElementById("personText").innerHTML = `${personCount} People`;
+ 
+}
+        }
+        </script>
+</body>
+</html>

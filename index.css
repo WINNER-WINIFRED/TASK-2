@@ -1,0 +1,178 @@
+body{
+    color: black;
+    background: black;
+    font-size: 30px;
+}
+
+.name{
+    border: 0px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    width: 100%;
+    margin-left: -5px;
+}
+.email{
+    border: 0px;
+    outline: none;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    width: 100%;
+    margin: 25px;
+    margin-left: -1%;
+}
+
+#personCount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container{
+    margin-left: 550px;
+    width: 35%;
+    background: white;
+    padding-top: 50px;
+    padding: 40px;
+}
+
+#total{
+    border: 0px;
+    outline: none;
+    border-bottom: 2px solid black;
+    width: 620px;
+    font-size: 30px;
+    
+}
+#date{
+    display: flex;
+    font: 20px;
+}
+
+.date1{
+width: 80px;
+height: 50px;
+border: transparent;
+border-bottom: 2px solid black;
+font-size: large;
+padding-left: 5%;
+margin-left: 40px;
+}
+
+.date2{
+    width: 80px;
+    height: 50px;
+    border: transparent;
+    border-bottom: 2px solid black;
+    font-size: large;
+    padding-left: 5%;
+    margin-left: 40px;
+}
+.date3{
+    width: 80px;
+    height: 50px;
+    border: transparent;
+    border-bottom: 2px solid black;
+    font-size: large;
+    padding-left: 5%;
+    margin-left: 32px;
+}
+
+
+#time{
+    border: 0px;
+    outline: none;
+    font-size: 30px; 
+}
+#time1{
+
+border: transparent;
+border-bottom: 2px solid black;
+height: 50px;
+width: 80px;
+padding-left: 5%;
+margin-left: 40px;
+font-size: large;
+}
+
+#time2{
+    border: transparent;
+    border-bottom: 2px solid black; 
+    height: 50px; 
+    width: 80px;
+    margin-left: 40px;
+    font-size: large;
+    padding-left: 6%;
+}
+#time3{
+    border: 0px;
+    border-bottom: 2px solid black;
+    margin-top: 15%;
+}
+
+#Email{
+    border: 0px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none; 
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+#btn2{
+    color: white;
+    background: black;
+    width: 620px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 10%;
+
+}
+
+#inc{
+    border: 0px;
+    outline: none; 
+    font-size: 30px;
+    margin-right: 30%;
+    background: white;
+    margin-top: 30px;
+}
+
+#dec{
+    border: 0px;
+    outline: none; 
+    font-size: 30px;
+    margin-left: 20%;
+    background: white;
+    margin-top: 30px;
+}
+
+#personTextline{
+    width: 100%;
+    border: transparent;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+}
+#personText{
+    margin-top: 50px;
+}
+select{
+    width: 80px;
+    height: 40px;
+    margin-top: 100px;
+    margin-left: 60px;
+    font-size: large;
+    border-bottom: 1px solid black;
+    
+}
+hr{
+    width: 100%;
+    border-bottom: 3px solid black;
+}
