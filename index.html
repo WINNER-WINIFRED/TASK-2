@@ -36,10 +36,12 @@
             </select>   
             </div>
             <div id="personCount">
-                <input type="button" value="+" id="inc" onclick="incNumber()"/>
-                <span id="personText">1 Person</span>
-                <!-- <label id="personText">1Person</label> -->
                 <input type="button" value="-" id="dec" onclick="decNumber()"/>
+                <span id="personText">1 Person</span>
+                <input type="button" value="+" id="inc" onclick="incNumber()"/>
+                <!-- <span id="personText">1 Person</span>
+                <label id="personText">1Person</label> 
+                <input type="button" value="-" id="dec" onclick="decNumber()"/> -->
             </div>
             <hr>
             <div id="btnContainer">
@@ -65,7 +67,7 @@
             if(!(my_name.value.length !== 0 && my_name.value.match(validNameRegex) && my_name.value.length > 2) ){
                      alert("name is invalid ");
                     return false;
-            }
+             }
 
             if(!(my_email.value.length !== 0 )){
                 alert("please, enter a valid email!!");
