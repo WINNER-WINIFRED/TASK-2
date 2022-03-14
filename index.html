@@ -11,14 +11,14 @@
     <div id="container">
         <form id="form" onsubmit=" validateForm()">
             <div>
-                <label for name = Name>Name</label><br>
-                <input name = "my_name" type="text" id="name" class="name" placeholder="">   
+                <label for name = Name></label><br>
+                <input name = "my_name" type="text" id="name" class="name" placeholder="Name">   
             </div>
             <div>
-                <label for email=email>Email</label><br>
-                <input name = "my_email" type="email" id="email" class="email" placeholder="">
+                <label for email=email></label><br>
+                <input name = "my_email" type="email" id="email" class="email" placeholder="Email">
             </div>
-
+ 
             <div name= "my_date" 1d="date">
                 <label for time = Pick a date>Pick a date</label>
                 <input name = "my_date1" type="text" id="date1" class="date1" placeholder="MM" min="1" max="12">
@@ -30,18 +30,16 @@
                 <label for time = Pick a time>Pick a time</label>
                 <input name = "my_time1" type="text" id="time1" class="time1" placeholder="09" min="1" max="12">
                 <input name = "my_time2" type="text" id="time2" class="time2" placeholder="00" min="00" max="59"> 
-                <select name = "my_time3" id="time3">
-                    <option value="AM">AM</option>
-                    <option value="PM">PM</option>
-            </select>   
+                <select id="time3">
+                    <option>AM</option>
+                    <option>PM</option>
+                </select> 
             </div>
             <div id="personCount">
                 <input type="button" value="-" id="dec" onclick="decNumber()"/>
-                <span id="personText">1 Person</span>
+                <span id="personText"><b>1 Person</b></span>
+                <!-- <label id="personText">1Person</label> -->
                 <input type="button" value="+" id="inc" onclick="incNumber()"/>
-                <!-- <span id="personText">1 Person</span>
-                <label id="personText">1Person</label> 
-                <input type="button" value="-" id="dec" onclick="decNumber()"/> -->
             </div>
             <hr>
             <div id="btnContainer">
@@ -51,7 +49,7 @@
         </form>
     </div>
     <script type="text/javascript">
-
+ 
         const validateForm = () => {
             let validNameRegex = "^[a-zA-Z]*$";
             let my_name = document.getElementById("name");
@@ -67,13 +65,13 @@
             if(!(my_name.value.length !== 0 && my_name.value.match(validNameRegex) && my_name.value.length > 2) ){
                      alert("name is invalid ");
                     return false;
-             }
-
+            }
+ 
             if(!(my_email.value.length !== 0 )){
                 alert("please, enter a valid email!!");
                 return false;
             }
-
+ 
             if(!(my_date1.value.length !== 0 && my_date1.value.match(validDate1Regex) && my_date1.value <= 12) ){
                  alert("invalid month!!");
                  return false;
@@ -82,7 +80,7 @@
                 alert("invalid date!!");
                 return false;
             }
-
+ 
             if (!(my_date3.value.length !== 0 && my_date3.value.match(validDate1Regex) && my_date3.value > 2021 )){
                 alert("invalid year!!");
                 return false;
@@ -91,17 +89,17 @@
                 alert("invalid time in hour!!");
                 return false;
             }
-
+ 
             if(!(my_time2.value.length !== 0 && my_time2.value < 60)){
                 alert("invalid time in minutes");
                 return false;
             }
-
+ 
             if((my_time3.value.length === 0)){
                 alert("select AM or PM");
                 return false;
             }
-
+ 
             
             // submit form
             alert("form submitted");
@@ -143,6 +141,5 @@ else {
         </script>
 </body>
 </html>
-
-
+ 
 https://github.com/WINNER-WINIFRED/TASK-2
